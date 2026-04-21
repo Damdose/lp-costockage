@@ -12,16 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://d9hhrg4mnvzow.cloudfront.net" crossorigin>
   <link rel="preconnect" href="https://user-assets.unbounce.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=optional"></noscript>
+  <!-- Preload critical font -->
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/figtree/v7/_Xms-HUzqDCFdgfMm4S9DaS5_cKg7zk.woff2" crossorigin>
   <!-- Preload LCP images -->
   <link rel="preload" as="image" href="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/ef4b55da-hero-mobile-1.webp" media="(max-width: 767px)">
   <link rel="preload" as="image" href="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/b2302028-hero-desktop-1.webp" media="(min-width: 768px)">
   <style>
-    body { font-family: 'Figtree', Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
-    .font-figtree { font-family: 'Figtree', sans-serif; }
-    .font-inter { font-family: 'Inter', sans-serif; }
-    .font-poppins { font-family: 'Poppins', sans-serif; }
+    /* Fallback fonts with size-adjust to minimize CLS */
+    @font-face { font-family: 'Figtree Fallback'; src: local('Arial'); size-adjust: 100.4%; ascent-override: 103%; descent-override: 29%; line-gap-override: 0%; }
+    @font-face { font-family: 'Inter Fallback'; src: local('Arial'); size-adjust: 107%; ascent-override: 90%; descent-override: 22%; line-gap-override: 0%; }
+    @font-face { font-family: 'Poppins Fallback'; src: local('Arial'); size-adjust: 112%; ascent-override: 88%; descent-override: 29%; line-gap-override: 0%; }
+    body { font-family: 'Figtree', 'Figtree Fallback', Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+    .font-figtree { font-family: 'Figtree', 'Figtree Fallback', sans-serif; }
+    .font-inter { font-family: 'Inter', 'Inter Fallback', sans-serif; }
+    .font-poppins { font-family: 'Poppins', 'Poppins Fallback', sans-serif; }
     details summary::-webkit-details-marker { display: none; }
     details summary { list-style: none; }
     details[open] summary .faq-chevron { transform: rotate(180deg); }
@@ -95,7 +101,7 @@
     </div>
     <!-- Hero Card overlapping image -->
     <div class="px-4 -mt-24 relative z-10">
-      <div class="bg-white rounded-[30px] border border-solid border-emerald-600 p-6 shadow-xl">
+      <div class="bg-white rounded-[30px] border border-solid border-emerald-600 p-6 shadow-xl" style="min-height:310px">
         <!-- Location Badge -->
         <div class="flex justify-center mb-5">
           <div class="bg-emerald-600 rounded-full px-5 py-2.5 flex items-center gap-3 shadow-md">
@@ -227,7 +233,7 @@
         <div class="flex-none w-72 md:w-80 rounded-2xl border border-solid border-emerald-800 overflow-hidden bg-white">
           <div class="relative">
             <div class="absolute right-3 top-3 bg-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">Jusqu'à -75% le 1<sup>er</sup> mois</div>
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/597fa39b-e543-4d73-8e2d-59221da85371/image-box-xs-2.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/597fa39b-e543-4d73-8e2d-59221da85371/image-box-xs-2.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="500" height="540">
           </div>
           <div class="p-4 text-left font-figtree">
             <h2 class="mb-2 text-emerald-800 text-2xl md:text-3xl font-bold">Box XS <span class="text-rose-300 text-lg md:text-2xl font-bold">- 0,5 à 2,5m<sup class="text-base leading-[0]">2</sup></span></h2>
@@ -240,7 +246,7 @@
         <div class="flex-none w-72 md:w-80 rounded-2xl border border-solid border-emerald-800 overflow-hidden bg-white">
           <div class="relative">
             <div class="absolute right-3 top-3 bg-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">Jusqu'à -75% le 1<sup>er</sup> mois</div>
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/f7fa8180-2dde-44e3-b2c6-41200390a119/5m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/f7fa8180-2dde-44e3-b2c6-41200390a119/5m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="500" height="540">
           </div>
           <div class="p-4 text-left font-figtree">
             <h2 class="mb-2 text-emerald-800 text-2xl md:text-3xl font-bold">Box S <span class="text-rose-300 text-lg md:text-2xl font-bold">- 2,6 à 6 m<sup class="text-base leading-[0]">2</sup></span></h2>
@@ -253,7 +259,7 @@
         <div class="flex-none w-72 md:w-80 rounded-2xl border border-solid border-emerald-800 overflow-hidden bg-white">
           <div class="relative">
             <div class="absolute right-3 top-3 bg-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">Jusqu'à -75% le 1<sup>er</sup> mois</div>
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/f1ef6d0b-6fc0-4aff-874a-a2a6a4fdf0a7/10m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/f1ef6d0b-6fc0-4aff-874a-a2a6a4fdf0a7/10m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="500" height="540">
           </div>
           <div class="p-4 text-left font-figtree">
             <h2 class="mb-2 text-emerald-800 text-2xl md:text-3xl font-bold">Box M <span class="text-rose-300 text-lg md:text-2xl font-bold">- 6,1 à 10 m<sup class="text-base leading-[0]">2</sup></span></h2>
@@ -266,7 +272,7 @@
         <div class="flex-none w-72 md:w-80 rounded-2xl border border-solid border-emerald-800 overflow-hidden bg-white">
           <div class="relative">
             <div class="absolute right-3 top-3 bg-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">Jusqu'à -75% le 1<sup>er</sup> mois</div>
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/9b86dda7-8565-4e4a-9ea6-52212ae68f0f/15m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/9b86dda7-8565-4e4a-9ea6-52212ae68f0f/15m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="500" height="540">
           </div>
           <div class="p-4 text-left font-figtree">
             <h2 class="mb-2 text-emerald-800 text-2xl md:text-3xl font-bold">Box L <span class="text-rose-300 text-lg md:text-2xl font-bold">- 10,1 à 15 m<sup class="text-base leading-[0]">2</sup></span></h2>
@@ -279,7 +285,7 @@
         <div class="flex-none w-72 md:w-80 rounded-2xl border border-solid border-emerald-800 overflow-hidden bg-white">
           <div class="relative">
             <div class="absolute right-3 top-3 bg-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10">Jusqu'à -75% le 1<sup>er</sup> mois</div>
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/1408b1e6-8e44-4def-b399-b82a74d9b492/20m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/1408b1e6-8e44-4def-b399-b82a74d9b492/20m2-1.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="500" height="540">
           </div>
           <div class="p-4 text-left font-figtree">
             <h2 class="mb-2 text-emerald-800 text-2xl md:text-3xl font-bold">Box XL <span class="text-rose-300 text-lg md:text-2xl font-bold">- +15 m<sup class="text-base leading-[0]">2</sup></span></h2>
@@ -309,7 +315,7 @@
       <!-- Map Screenshot -->
       <div class="max-w-3xl mx-auto mb-10">
         <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/55395fb9-screenshot-2026-02-16-at-11-10-34_10jg0e9000000000000028.png"
-             alt="Carte des centres" class="w-full rounded-md border-2 border-solid border-rose-300" loading="lazy" decoding="async">
+             alt="Carte des centres" class="w-full rounded-md border-2 border-solid border-rose-300" loading="lazy" decoding="async" width="700" height="513">
       </div>
 
       <!-- Centers Accordion (2 columns) -->
@@ -333,7 +339,7 @@
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="relative">
-                  <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/a0ddcec9-3c4d-4fd6-9e27-0a624426ccba/paris-19-riquet-modifiee.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+                  <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/a0ddcec9-3c4d-4fd6-9e27-0a624426ccba/paris-19-riquet-modifiee.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="600" height="400">
                   <span class="absolute left-2.5 bottom-2.5 bg-rose-300/60 text-black text-xl font-bold px-4 py-1.5 rounded-3xl">Paris 19 Riquet</span>
                 </div>
                 <div class="px-4 py-5">
@@ -472,7 +478,7 @@
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="relative">
-                  <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/6f85b660-b2ea-4897-8350-a754c0851598/palaiseau-modifiee.original.webp" alt="" class="w-full" loading="lazy" decoding="async">
+                  <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/6f85b660-b2ea-4897-8350-a754c0851598/palaiseau-modifiee.original.webp" alt="" class="w-full" loading="lazy" decoding="async" width="600" height="186">
                   <span class="absolute left-2.5 bottom-2.5 bg-rose-300/60 text-black text-xl font-bold px-4 py-1.5 rounded-3xl">Palaiseau (91)</span>
                 </div>
                 <div class="px-4 py-5">
@@ -620,7 +626,7 @@
       <div class="flex flex-col lg:flex-row items-center gap-10">
         <!-- Illustration -->
         <div class="w-full lg:w-1/2">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/98a2b82d-frame-1000006027.webp" alt="" class="w-full max-w-[552px] mx-auto" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/98a2b82d-frame-1000006027.webp" alt="" class="w-full max-w-[552px] mx-auto" loading="lazy" decoding="async" width="552" height="552">
         </div>
         <!-- Content -->
         <div class="w-full lg:w-1/2">
@@ -712,7 +718,7 @@
         </div>
         <!-- Image -->
         <div class="w-full lg:w-1/2 order-first lg:order-last">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/8d8ee305-frame-141-4.webp" alt="" class="w-full max-w-[552px] mx-auto rounded-2xl" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/8d8ee305-frame-141-4.webp" alt="" class="w-full max-w-[552px] mx-auto rounded-2xl" loading="lazy" decoding="async" width="552" height="552">
         </div>
       </div>
     </div>
@@ -773,22 +779,22 @@
       </div>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/dd37a66f-image-27_1000000000000000000028.png" alt="Les Echos" class="max-h-7 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/dd37a66f-image-27_1000000000000000000028.png" alt="Les Echos" class="max-h-7 max-w-full" loading="lazy" decoding="async" width="112" height="28">
         </div>
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/868e5236-image-28_1000000000000000000028.png" alt="BFM TV" class="max-h-12 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/868e5236-image-28_1000000000000000000028.png" alt="BFM TV" class="max-h-12 max-w-full" loading="lazy" decoding="async" width="112" height="48">
         </div>
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/937f5524-image-39_103y01g000000000000028.png" alt="TF1" class="max-h-12 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/937f5524-image-39_103y01g000000000000028.png" alt="TF1" class="max-h-12 max-w-full" loading="lazy" decoding="async" width="112" height="48">
         </div>
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/22a963f2-image-23-2_101x01g000000000000028.png" alt="M6" class="max-h-12 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/22a963f2-image-23-2_101x01g000000000000028.png" alt="M6" class="max-h-12 max-w-full" loading="lazy" decoding="async" width="112" height="48">
         </div>
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/e40720d4-image-38-1_104600s000000000000028.png" alt="France 2" class="max-h-7 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/e40720d4-image-38-1_104600s000000000000028.png" alt="France 2" class="max-h-7 max-w-full" loading="lazy" decoding="async" width="112" height="28">
         </div>
         <div class="bg-white shadow-md rounded-3xl border border-emerald-100 px-4 py-4 flex items-center justify-center h-24">
-          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/f4f1e1a6-image-31_1000000000000000000028.png" alt="La Voix du Nord" class="max-h-12 max-w-full" loading="lazy" decoding="async">
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/f4f1e1a6-image-31_1000000000000000000028.png" alt="La Voix du Nord" class="max-h-12 max-w-full" loading="lazy" decoding="async" width="112" height="48">
         </div>
       </div>
     </div>
