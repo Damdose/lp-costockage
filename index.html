@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <meta name="description" content="Kostok - Boxes de self-stockage sécurisés en Île-de-France. À partir de 39€/mois, accès 7j/7, assurance incluse, 0 caution.">
   <title>Kostok - Self-Stockage Ile-de-France</title>
   <link rel="stylesheet" href="output.css">
@@ -61,7 +61,7 @@
 <body class="bg-zinc-100 text-neutral-800 text-base leading-normal overflow-x-clip min-h-full">
 
   <!-- ==================== TOP BAR (Logo + Promo Badge) ==================== -->
-  <div class="bg-white py-3 px-4">
+  <header class="bg-white py-3 px-4">
     <div class="max-w-7xl mx-auto relative flex items-center justify-center">
       <!-- Logo Kostok centered -->
       <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/0a59ba98-logotype-kostok-h2-cmjn-poly_104b01q000000000000028.png"
@@ -73,15 +73,16 @@
         <span class="text-emerald-800 font-figtree text-sm font-bold"> le 1<sup class="text-xs">er</sup> mois</span>
       </div>
     </div>
-  </div>
+  </header>
 
+  <main>
   <!-- ==================== HERO ==================== -->
   <!-- Mobile Hero -->
   <section class="md:hidden">
     <!-- Hero image with promo badge overlay -->
     <div class="relative">
       <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/ef4b55da-hero-mobile-1.webp"
-           alt="Hero Kostok" class="w-full h-auto" fetchpriority="high">
+           alt="Couple devant des boxes de self-stockage Kostok" class="w-full h-auto" width="750" height="500" fetchpriority="high">
       <!-- Promo Badge on image -->
       <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-rose-300 rounded-full px-4 py-2 flex items-center gap-1 shadow-md">
         <span class="text-emerald-800 font-figtree text-sm font-bold">&#127881; Jusqu'à </span>
@@ -112,7 +113,7 @@
         </div>
         <!-- Subtitle -->
         <p class="text-center leading-7 mb-4">
-          <span class="text-neutral-400 font-figtree text-base font-semibold">Libérez de la place chez vous<br>(et dans votre tête)</span>
+          <span class="text-neutral-500 font-figtree text-base font-semibold">Libérez de la place chez vous<br>(et dans votre tête)</span>
         </p>
         <!-- Rating -->
         <div class="flex items-center justify-center gap-2">
@@ -128,7 +129,7 @@
   <section class="hidden md:block relative min-h-[680px]">
     <div class="absolute inset-0 overflow-hidden">
       <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/b2302028-hero-desktop-1.webp"
-           alt="Hero Kostok" class="w-full h-full object-cover" fetchpriority="high">
+           alt="Couple devant des boxes de self-stockage Kostok" class="w-full h-full object-cover" width="1920" height="680" fetchpriority="high">
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 py-16">
       <div class="bg-white rounded-[30px] border border-solid border-emerald-600 p-6 w-full max-w-md shadow-xl">
@@ -152,7 +153,7 @@
         </div>
         <!-- Subtitle -->
         <p class="text-center leading-7 mb-4">
-          <span class="text-neutral-400 font-figtree text-base font-semibold">Libérez de la place chez vous (et dans votre tête)</span>
+          <span class="text-neutral-500 font-figtree text-base font-semibold">Libérez de la place chez vous (et dans votre tête)</span>
         </p>
         <!-- Rating -->
         <div class="flex items-center justify-center gap-2 mb-5">
@@ -182,8 +183,8 @@
         <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/25588777-container-4_1000000000000000000028.png" alt="" class="w-28 h-1" loading="lazy" decoding="async">
       </div>
       <p class="text-center leading-6 mb-8">
-        <span class="text-neutral-400 font-figtree text-base">Accès autonome 7j/7 de 6h à 23h</span><br>
-        <span class="text-neutral-400 font-figtree text-base">Prix Net, Assurance comprise - 0 caution</span>
+        <span class="text-neutral-500 font-figtree text-base">Accès autonome 7j/7 de 6h à 23h</span><br>
+        <span class="text-neutral-500 font-figtree text-base">Prix Net, Assurance comprise - 0 caution</span>
       </p>
 
       <!-- Security Feature Pills -->
@@ -210,11 +211,11 @@
 
       <!-- Box Size Cards Carousel -->
       <div class="relative">
-      <button onclick="document.getElementById('boxCarousel').scrollBy({left:-320,behavior:'smooth'})"
+      <button aria-label="Défiler à gauche" onclick="document.getElementById('boxCarousel').scrollBy({left:-320,behavior:'smooth'})"
               class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center cursor-pointer border-none hover:bg-gray-50 hidden md:flex">
         <svg class="w-5 h-5 text-zinc-800 rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
       </button>
-      <button onclick="document.getElementById('boxCarousel').scrollBy({left:320,behavior:'smooth'})"
+      <button aria-label="Défiler à droite" onclick="document.getElementById('boxCarousel').scrollBy({left:320,behavior:'smooth'})"
               class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center cursor-pointer border-none hover:bg-gray-50">
         <svg class="w-5 h-5 text-zinc-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
       </button>
@@ -325,7 +326,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">39€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="relative">
@@ -350,7 +351,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">47€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -371,7 +372,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">96€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -392,7 +393,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">78€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -422,7 +423,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">61€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -443,7 +444,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">70€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -464,7 +465,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">39€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="relative">
@@ -489,7 +490,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">63€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -510,7 +511,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">64€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -531,7 +532,7 @@
                     <p class="text-rose-300 text-sm">À partir de <b class="text-emerald-800 text-lg">49€</b> TTC - Assurance incluse</p>
                   </div>
                 </div>
-                <svg class="w-5 h-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-5 h-5 shrink-0 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
               </summary>
               <div class="mt-3 text-sm border border-rose-300 rounded-md overflow-hidden">
                 <div class="px-4 py-5">
@@ -571,17 +572,17 @@
       <!-- Rating Stats -->
       <div class="flex flex-row justify-center items-center gap-6 sm:gap-10 md:gap-16 mb-10">
         <div class="text-center">
-          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,7<span class="text-white/60 text-xl font-light">/5</span></p>
+          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,7<span class="text-white/80 text-xl font-light">/5</span></p>
           <p class="text-white font-figtree text-base md:text-xl font-light mt-2">Facilité<br>d'accès</p>
         </div>
         <div class="w-px h-20 bg-white/30"></div>
         <div class="text-center">
-          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,7<span class="text-white/60 text-xl font-light">/5</span></p>
+          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,7<span class="text-white/80 text-xl font-light">/5</span></p>
           <p class="text-white font-figtree text-base md:text-xl font-light mt-2">Propreté</p>
         </div>
         <div class="w-px h-20 bg-white/30"></div>
         <div class="text-center">
-          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,8<span class="text-white/60 text-xl font-light">/5</span></p>
+          <p class="text-amber-300 font-figtree text-5xl md:text-6xl font-bold leading-none">4,8<span class="text-white/80 text-xl font-light">/5</span></p>
           <p class="text-white font-figtree text-base md:text-xl font-light mt-2">Conseils<br>&amp; SAV</p>
         </div>
       </div>
@@ -626,7 +627,7 @@
           <div class="flex justify-center lg:justify-start mb-4">
             <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/85f20276-frame-1000005973_1000000000000000000028.png" alt="" class="w-28 h-1" loading="lazy" decoding="async">
           </div>
-          <p class="text-center lg:text-left text-neutral-400 font-figtree text-sm mb-6">Une solution pensée pour alléger votre quotidien, dès aujourd'hui.</p>
+          <p class="text-center lg:text-left text-neutral-500 font-figtree text-sm mb-6">Une solution pensée pour alléger votre quotidien, dès aujourd'hui.</p>
           <!-- Step 1 -->
           <div class="bg-white rounded-3xl border-2 border-solid border-slate-400 p-4 flex items-start gap-4 mb-4">
             <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/0e9b47f3-screenshot-2025-12-01-at-18-01-23-1_1000000000000000000028.png" alt="" class="w-14 h-16 shrink-0" loading="lazy" decoding="async">
@@ -803,29 +804,29 @@
         <div class="flex flex-col gap-4">
           <details open class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4">
             <summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-black">Comment se passe la réservation ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">Vous pouvez réserver votre box très facilement en faisant une demande de devis ou en contactant directement notre service d'experts au 01 76 44 05 91.</div>
+            <div class="pb-4 text-neutral-500 text-base leading-6">Vous pouvez réserver votre box très facilement en faisant une demande de devis ou en contactant directement notre service d'experts au 01 76 44 05 91.</div>
           </details>
           <details class="rounded-2xl border-[3px] border-solid border-amber-300 px-4">
             <summary class="faq-btn-gold text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Est-il facile d'accéder au box ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">Oui, nos centres sont pensés pour vous faciliter l'accès à votre box. Nos centres sont 100% digitalisés, accès 7j/7 de 6h à 23h.</div>
+            <div class="pb-4 text-neutral-500 text-base leading-6">Oui, nos centres sont pensés pour vous faciliter l'accès à votre box. Nos centres sont 100% digitalisés, accès 7j/7 de 6h à 23h.</div>
           </details>
           <details class="rounded-2xl border-[3px] border-solid border-rose-300 px-4">
             <summary class="faq-btn-pink text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Puis-je visiter le box avant de le réserver ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">Bien sûr ! Vous pouvez le visiter après avoir fait votre réservation. Si il ne vous convient pas, vous pouvez annuler gratuitement et immédiatement votre réservation.</div>
+            <div class="pb-4 text-neutral-500 text-base leading-6">Bien sûr ! Vous pouvez le visiter après avoir fait votre réservation. Si il ne vous convient pas, vous pouvez annuler gratuitement et immédiatement votre réservation.</div>
           </details>
         </div>
         <div class="flex flex-col gap-4">
           <details class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4">
             <summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Mes affaires sont-elles en sécurité ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">Oui, nos sites sont équipés de vidéosurveillance et de systèmes d'alarme, de contrôle d'accès.</div>
+            <div class="pb-4 text-neutral-500 text-base leading-6">Oui, nos sites sont équipés de vidéosurveillance et de systèmes d'alarme, de contrôle d'accès.</div>
           </details>
           <details class="rounded-2xl border-[3px] border-solid border-amber-300 px-4">
             <summary class="faq-btn-gold text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Y a-t-il une caution à payer ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">Non, vous payez uniquement vos loyers. L'assurance est aussi incluse dans le prix.</div>
+            <div class="pb-4 text-neutral-500 text-base leading-6">Non, vous payez uniquement vos loyers. L'assurance est aussi incluse dans le prix.</div>
           </details>
           <details class="rounded-2xl border-[3px] border-solid border-rose-300 px-4">
             <summary class="faq-btn-pink text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Est-ce que je peux modifier ma réservation ?</summary>
-            <div class="pb-4 text-neutral-400 text-base leading-6">
+            <div class="pb-4 text-neutral-500 text-base leading-6">
               <p class="mb-4">Oui, vous pouvez modifier la réservation facilement et gratuitement jusqu'à J-3.</p>
               <p>Pendant votre location vous avez finalement plus d'affaires à stocker ? Modifiez votre réservation très facilement.</p>
             </div>
@@ -857,6 +858,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ==================== STICKY BOTTOM BAR ==================== -->
   <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-solid border-t-black/50 rounded-t-xl z-[9999] md:hidden" style="font-family: Poppins, sans-serif;">
     <div class="max-w-screen-md mx-auto w-full">
@@ -864,12 +867,12 @@
         <strong class="font-bold">Jusqu'à - 75% de remise le 1er mois</strong>
       </div>
       <div class="flex gap-2.5 p-2.5 pt-0">
-        <button class="text-stone-900 bg-amber-300 flex-1 font-figtree text-base font-semibold p-1.5 rounded-xl border-none cursor-pointer">
+        <a href="#devis" class="text-stone-900 bg-amber-300 flex-1 font-figtree text-base font-semibold p-1.5 rounded-xl border-none cursor-pointer no-underline text-center flex items-center justify-center" role="button">
           Demander un Devis
-        </button>
+        </a>
         <a href="tel:0176440591" class="text-black flex-col flex-1 justify-center items-center font-figtree text-base font-semibold no-underline flex p-1.5 rounded-xl border border-solid border-black/50 hover:text-blue-700">
           <span class="flex items-center justify-center gap-2.5">
-            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/06ee619f-cd73-4889-9a74-e76f253024ec/image-5.small.png" alt="" class="inline w-4 h-4" loading="lazy" decoding="async">
+            <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/06ee619f-cd73-4889-9a74-e76f253024ec/image-5.small.png" alt="Téléphone" class="inline w-4 h-4" width="16" height="16" loading="lazy" decoding="async">
             01 76 44 05 91
           </span>
           <small class="text-neutral-500 text-xs">(Appel Gratuit)</small>
