@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
+  <!-- Server Side Tracking by Taggrs.io -->
+  <script>
+      (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+              'gtm.start': new Date().getTime(),
+              event: 'gtm.js'
+          });
+
+          var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l !== 'dataLayer' ? '&l=' + l : '';
+
+          j.async = true;
+          j.src = 'https://sstrk.costockage.fr/io3xeiyxja.js?tg=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'WVD7LC');
+  </script>
+  <!-- End Server Side Tracking by Taggrs.io -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
@@ -68,6 +87,12 @@
   </style>
 </head>
 <body class="bg-zinc-100 text-neutral-800 text-base leading-normal overflow-x-clip min-h-full">
+<!-- Server Side Tracking by Taggrs.io (noscript) -->
+<noscript>
+    <iframe src="https://sstrk.costockage.fr/io3xeiyxja.html?tg=WVD7LC" height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+<!-- End Server Side Tracking by Taggrs.io (noscript) -->
 
   <!-- ==================== TOP BAR (Logo + Promo Badge) ==================== -->
   <header class="bg-white py-3 px-4">
@@ -918,7 +943,7 @@
         <li><strong>Donnent un prix net, sans surprise</strong></li>
       </ul>
       <!-- Phone input -->
-      <form onsubmit="event.preventDefault();var tel=this.querySelector('input').value;if(tel.length>=10){window.location.href='merci.html';}else{this.querySelector('input').style.borderColor='#f87171';}" class="mb-4">
+      <form onsubmit="event.preventDefault();var tel=this.querySelector('input').value;if(tel.length>=10){sendLeadEmail(tel);fetch('https://hook.eu1.make.com/7lach1iy3vucbm4unzx463l67c7nwye4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:'+33'+tel.replace(/^0/,''),phone_raw:tel,page:'Kostok - Self-Stockage Ile-de-France',ville:'Ile-de-France',date:new Date().toISOString()})}).finally(function(){window.location.href='merci.html';});}else{this.querySelector('input').style.borderColor='#f87171';}" class="mb-4">
         <input type="tel" required minlength="10" placeholder="Numéro de téléphone" class="w-full border-2 border-solid border-zinc-300 rounded-full px-5 py-4 text-base font-figtree mb-4 outline-none focus:border-emerald-600" style="background:#fff;">
         <button type="submit" class="w-full bg-amber-300 text-stone-900 font-figtree text-lg font-bold py-4 rounded-full border-none cursor-pointer shadow-md hover:bg-amber-400">
           Me Rappeler
@@ -942,6 +967,13 @@
   <script>
     function openPopup(){document.getElementById('popupDevis').classList.remove('hidden');document.body.style.overflow='hidden';}
     function closePopup(){document.getElementById('popupDevis').classList.add('hidden');document.body.style.overflow='';}
+    function sendLeadEmail(phone){
+      fetch('/api/send-email',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({phone:phone})
+      });
+    }
     document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a[href="#devis"]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();openPopup();});});});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closePopup();});
   </script>
