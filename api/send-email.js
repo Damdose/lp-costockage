@@ -1,11 +1,13 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { phone } = req.body;
+  const { phone, page, ville } = req.body;
   if (!phone) return res.status(400).json({ error: 'Phone required' });
 
   const phoneFormatted = '+33' + phone.replace(/^0/, '');
   const now = new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'long', timeStyle: 'short' });
+  const pageName = page || 'Kostok — Self-Stockage Île-de-France';
+  const villeName = ville || 'Île-de-France';
 
   const html = `
 <!DOCTYPE html>
@@ -33,11 +35,11 @@ export default async function handler(req, res) {
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e4e4e7;border-radius:8px;overflow:hidden;">
               <tr style="background-color:#f9fafb;">
                 <td style="padding:12px 16px;font-size:13px;color:#71717a;font-weight:600;width:160px;border-bottom:1px solid #e4e4e7;">Page</td>
-                <td style="padding:12px 16px;font-size:14px;color:#18181b;border-bottom:1px solid #e4e4e7;">Kostok — Self-Stockage Île-de-France</td>
+                <td style="padding:12px 16px;font-size:14px;color:#18181b;border-bottom:1px solid #e4e4e7;">${pageName}</td>
               </tr>
               <tr>
                 <td style="padding:12px 16px;font-size:13px;color:#71717a;font-weight:600;width:160px;border-bottom:1px solid #e4e4e7;">Ville</td>
-                <td style="padding:12px 16px;font-size:14px;color:#18181b;border-bottom:1px solid #e4e4e7;">Île-de-France</td>
+                <td style="padding:12px 16px;font-size:14px;color:#18181b;border-bottom:1px solid #e4e4e7;">${villeName}</td>
               </tr>
               <tr style="background-color:#f9fafb;">
                 <td style="padding:12px 16px;font-size:13px;color:#71717a;font-weight:600;width:160px;border-bottom:1px solid #e4e4e7;">Téléphone</td>
@@ -59,7 +61,7 @@ export default async function handler(req, res) {
         <!-- Footer -->
         <tr>
           <td style="background-color:#f4f4f5;padding:16px 32px;text-align:center;border-top:1px solid #e4e4e7;">
-            <p style="margin:0;font-size:12px;color:#a1a1aa;">Kostok — Self-Stockage Île-de-France</p>
+            <p style="margin:0;font-size:12px;color:#a1a1aa;">${pageName}</p>
             <p style="margin:4px 0 0;font-size:11px;color:#d4d4d8;">Lead généré depuis landing.costockage.fr</p>
           </td>
         </tr>
@@ -78,7 +80,7 @@ export default async function handler(req, res) {
     body: JSON.stringify({
       sender: { name: 'Leads LP Kostok', email: 'damien.tamazout@gmail.com' },
       to: [{ email: 'damien.tamazout@gmail.com' }],
-      subject: '🟢 Nouveau lead - Kostok Ile-de-France',
+      subject: `🟢 Nouveau lead - ${pageName}`,
       htmlContent: html
     })
   });

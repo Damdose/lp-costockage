@@ -978,7 +978,7 @@
       fetch('/api/send-email',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({phone:phone})
+        body:JSON.stringify({phone:phone,page:'Kostok - Self-Stockage Ile-de-France',ville:'Ile-de-France'})
       });
     }
     document.addEventListener('click',function(e){var a=e.target.closest('a[href="#devis"]');if(a){e.preventDefault();openPopup();}});
