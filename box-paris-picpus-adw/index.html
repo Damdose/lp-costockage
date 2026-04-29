@@ -958,7 +958,7 @@
       fetch('https://api.brevo.com/v3/smtp/email',{
         method:'POST',
         headers:{'Content-Type':'application/json','api-key':'xsmtpsib-9bed2d0b0bba3aeb79877cadce2e9dd0803ecddb3ba59992787e7cc8de203208-idMqRgR1n7erQdsG'},
-        body:JSON.stringify({sender:{name:'Kostok Lead',email:'noreply@costockage.fr'},to:[{email:'leads@costockage.fr'}],subject:'Nouveau Lead - '+ville+' - '+phone,htmlContent:'<h2>Nouveau lead Landing Page</h2><p><strong>Téléphone :</strong> '+phone+'</p><p><strong>Ville :</strong> '+ville+'</p><p><strong>Landing Page :</strong> '+page+'</p><p><strong>Centre :</strong> '+ville+'</p><p><strong>Date :</strong> '+new Date().toLocaleString('fr-FR')+'</p>'})
+        body:JSON.stringify({sender:{name:'Kostok Lead',email:'contact@costockage.fr'},to:[{email:'leads@costockage.fr'}],subject:'Nouveau Lead - '+ville+' - '+phone,htmlContent:'<h2>Nouveau lead Landing Page</h2><p><strong>Téléphone :</strong> '+phone+'</p><p><strong>Ville :</strong> '+ville+'</p><p><strong>Landing Page :</strong> '+page+'</p><p><strong>Centre :</strong> '+ville+'</p><p><strong>Date :</strong> '+new Date().toLocaleString('fr-FR')+'</p>'})
       });
     }
     document.addEventListener('click',function(e){var a=e.target.closest('a[href="#devis"]');if(a){e.preventDefault();openPopup();}});
