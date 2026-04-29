@@ -71,17 +71,17 @@ export default async function handler(req, res) {
 </body>
 </html>`;
 
-  const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+  const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
-      'api-key': process.env.BREVO_API_KEY,
+      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      sender: { name: 'Leads LP Kostok', email: 'damien.tamazout@gmail.com' },
-      to: [{ email: 'damien.tamazout@gmail.com' }],
+      from: 'Leads LP Kostok <contact@costockage.fr>',
+      to: ['damien.tamazout@gmail.com'],
       subject: `🟢 Nouveau lead - ${pageName}`,
-      htmlContent: html
+      html: html
     })
   });
 
