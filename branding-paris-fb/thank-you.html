@@ -53,21 +53,12 @@
     var ric=window.requestIdleCallback||function(cb){setTimeout(cb,200)};
     window.addEventListener('load',function(){ric(function(){var lnk=document.createElement('link');lnk.rel='stylesheet';lnk.href='https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=optional';document.head.appendChild(lnk);});});
   </script>
-  <script type="text/javascript">
-  (function() {
-    window.sib = { equeue: [], client_key: "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" };
-    var n = document.createElement("script"), i = document.getElementsByTagName("script")[0];
-    n.type = "text/javascript"; n.id = "sendinblue-js"; n.async = true;
-    n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key;
-    i.parentNode.insertBefore(n, i);
-  })();
-  </script>
 </head>
 <body class="bg-white min-h-screen px-4 py-10">
   <div class="max-w-xl mx-auto text-center">
     <!-- Logo -->
     <div class="flex justify-center mb-8">
-      <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-thank-you-branding-idf-adw/0cb8bbba-kostok-logo_105k01y000000000000028.png" alt="Kostok" class="h-16" width="192" height="64">
+      <img src="../assets/logos/kostok-thankyou.png" alt="Kostok" class="h-16" width="192" height="64">
     </div>
 
     <!-- Title -->
@@ -109,10 +100,11 @@
   </div>
 
   <script>
-    var gtmLoaded=false;
+    var gtmLoaded=false,sibLoaded=false;
+    function loadSib(){if(sibLoaded)return;sibLoaded=true;window.sib={equeue:[],client_key:"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"};var s=document.createElement("script");s.async=true;s.src="https://sibautomation.com/sa.js?key="+window.sib.client_key;document.head.appendChild(s);}
     function loadGTM(){if(gtmLoaded)return;gtmLoaded=true;window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var j=document.createElement('script');j.async=true;j.src='https://sstrk.costockage.fr/io3xeiyxja.js?tg=WVD7LC';document.head.appendChild(j);}
-    ['scroll','click','touchstart','mouseover'].forEach(function(e){document.addEventListener(e,loadGTM,{once:true,passive:true});});
-    setTimeout(loadGTM,3000);
+    ['scroll','click','touchstart','mouseover'].forEach(function(e){document.addEventListener(e,function(){loadGTM();loadSib();},{once:true,passive:true});});
+    setTimeout(function(){loadGTM();loadSib();},3000);
   </script>
 </body>
 </html>

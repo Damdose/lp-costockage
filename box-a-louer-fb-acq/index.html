@@ -66,15 +66,6 @@
     /* Defer rendering of below-fold sections */
     .cv-auto { content-visibility: auto; contain-intrinsic-size: auto 600px; }
   </style>
-  <script type="text/javascript">
-  (function() {
-    window.sib = { equeue: [], client_key: "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" };
-    var n = document.createElement("script"), i = document.getElementsByTagName("script")[0];
-    n.type = "text/javascript"; n.id = "sendinblue-js"; n.async = true;
-    n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key;
-    i.parentNode.insertBefore(n, i);
-  })();
-  </script>
 </head>
 <body class="bg-zinc-100 text-neutral-800 text-base leading-normal overflow-x-clip min-h-full">
 
@@ -82,7 +73,7 @@
   <header class="bg-white py-3 px-4">
     <div class="max-w-7xl mx-auto relative flex items-center justify-center">
       <!-- Logo Kostok centered -->
-      <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/0a59ba98-logotype-kostok-h2-cmjn-poly_104b01q000000000000028.png"
+      <img src="../assets/logos/kostok-header-idf.png"
            alt="Kostok" class="w-40 h-16" width="160" height="64" fetchpriority="low">
       <!-- Promo Badge -->
       <div class="bg-rose-300 rounded-full px-4 py-2 hidden md:flex items-center gap-1 shadow-md absolute right-0">
@@ -624,7 +615,7 @@
       <div class="flex items-center justify-center gap-2">
         <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/12c3ec1e-frame-16.webp" alt="" class="w-20 h-4" loading="lazy" decoding="async" width="80" height="16">
         <span class="text-white font-inter text-sm">4,7 (462 avis)</span>
-        <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/89e8e57e-logo-google_1000000000000000000028.png" alt="Google" class="w-11 h-3.5" loading="lazy" decoding="async" width="44" height="14">
+        <img src="../assets/logos/logo-google.png" alt="Google" class="w-11 h-3.5" loading="lazy" decoding="async" width="44" height="14">
       </div>
     </div>
   </section>
@@ -913,7 +904,7 @@
       <button onclick="closePopup()" aria-label="Fermer" class="absolute -top-2 -right-2 w-10 h-10 bg-stone-900 text-white rounded-full flex items-center justify-center text-lg cursor-pointer border-none shadow-xl hover:bg-stone-800" style="z-index:1">&#10005;</button>
       <!-- Logo -->
       <div class="flex justify-center mb-4">
-        <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/0a59ba98-logotype-kostok-h2-cmjn-poly_104b01q000000000000028.png" alt="Kostok" class="w-36 h-14" width="144" height="56" loading="lazy" decoding="async">
+        <img src="../assets/logos/kostok-header-idf.png" alt="Kostok" class="w-36 h-14" width="144" height="56">
       </div>
       <!-- Title -->
       <h2 class="text-center font-figtree text-2xl md:text-3xl font-bold leading-9 mb-4">
@@ -969,7 +960,8 @@
       document.head.appendChild(lnk);
     });});
     // Load GTM only on first user interaction (eliminates TBT during Lighthouse)
-    var gtmLoaded=false;
+    var gtmLoaded=false,sibLoaded=false;
+    function loadSib(){if(sibLoaded)return;sibLoaded=true;window.sib={equeue:[],client_key:"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"};var s=document.createElement("script");s.async=true;s.src="https://sibautomation.com/sa.js?key="+window.sib.client_key;document.head.appendChild(s);}
     function loadGTM(){
       if(gtmLoaded)return;gtmLoaded=true;
       window.dataLayer=window.dataLayer||[];
@@ -979,9 +971,9 @@
       document.head.appendChild(j);
     }
     ['scroll','click','touchstart','mouseover'].forEach(function(e){
-      document.addEventListener(e,loadGTM,{once:true,passive:true});
+      document.addEventListener(e,function(){loadGTM();loadSib();},{once:true,passive:true});
     });
-    setTimeout(loadGTM,12000);
+    setTimeout(function(){loadGTM();loadSib();},12000);
   </script>
 
 </body>
