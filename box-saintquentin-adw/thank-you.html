@@ -87,11 +87,21 @@
       </div>
     </div>
 
-    <!-- Phone info -->
-    <p class="text-zinc-600 text-base leading-7 mb-10">
-      Le numéro qui va vous rappeler est le :<br>
-      <a href="tel:0372880338" class="text-emerald-600 text-base font-bold no-underline">03 72 88 03 38</a>
-    </p>
+    <!-- Phone info - Modifier PHONE_NUMBERS ci-dessous pour preremplir -->
+    <div id="phone-info" class="text-zinc-600 text-base leading-7 mb-10"></div>
+    <script>
+    var PHONE_NUMBERS = ["0372880338"];
+    (function(){
+      var p=new URLSearchParams(window.location.search),t=p.get("tel");
+      var nums=t?t.split(","):PHONE_NUMBERS,c=document.getElementById("phone-info"),v=[],err=false;
+      nums.forEach(function(n){n=n.trim().replace(/[^0-9]/g,"");if(/^0[0-9]{9}$/.test(n))v.push(n);else if(n.length>0)err=true;});
+      if(err||v.length===0){c.innerHTML="<span style=\"color:#f87171;font-weight:bold;\">Format incorrect</span>";return;}
+      var label=v.length===1?"Le num\xe9ro qui va vous rappeler est le :":"Les num\xe9ros qui vont vous rappeler sont les :";
+      var html=label+"<br>";
+      v.forEach(function(n,i){var f=n.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/,"$1 $2 $3 $4 $5");html+="<a href=\"tel:"+n+"\" class=\"text-emerald-600 text-base font-bold no-underline\">"+f+"</a>";if(i<v.length-1)html+="<br>";});
+      c.innerHTML=html;
+    })();
+    </script>
 
     <!-- Illustration -->
     <div class="flex justify-center">
