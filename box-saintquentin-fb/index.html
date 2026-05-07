@@ -52,7 +52,7 @@
 </head>
 <body class="bg-zinc-100 text-neutral-800 text-base leading-normal overflow-x-clip min-h-full">
 
-  <header class="bg-white py-3 px-4">
+  <header class="bg-white py-3 px-4 md:sticky md:top-0 z-50">
     <div class="max-w-7xl mx-auto relative flex items-center justify-center">
       <img src="../assets/logos/kostok-header.webp" alt="Kostok" class="w-40 h-16" width="160" height="64" fetchpriority="high">
       <div class="bg-rose-300 rounded-full px-4 py-2 hidden md:flex items-center gap-1 shadow-md absolute right-0">
@@ -65,7 +65,7 @@
   <!-- MOBILE HERO -->
   <section class="md:hidden">
     <div class="relative">
-      <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/6ee71f1b-b395-438f-8037-4c6c4205c458/slide-1-1.original.webp" alt="Centre de self-stockage Kostok Saint-Quentin" class="w-full h-auto" width="800" height="843" fetchpriority="high">
+      <img src="https://user-assets.unbounce.com/016e577e-633b-11e3-9584-12313e008591/6ee71f1b-b395-438f-8037-4c6c4205c458/slide-1-1.original.webp" alt="Centre de self-stockage Kostok Saint-Quentin" class="w-full" width="800" height="843" fetchpriority="high" style="max-height:55vh;object-fit:cover">
       <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-rose-300 rounded-full px-4 py-2 shadow-md" style="white-space:nowrap">
         <span class="font-figtree text-sm font-bold"><span class="text-emerald-800">🎉 Jusqu'à </span><span class="text-white">-75%</span><span class="text-emerald-800"> le 1<sup class="text-xs">er</sup> mois</span></span>
       </div>
@@ -90,9 +90,10 @@
         <div class="bg-neutral-100 rounded-full px-4 py-2 flex items-center justify-center gap-2 mb-4">
           <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-palaiseau-adw/12c3ec1e-frame-16.webp" alt="" class="w-20 h-4" width="80" height="16">
           <span class="text-gray-600 font-inter text-sm">4,9/5 (83 avis) | <strong>Excellent</strong></span>
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/8563fa39-image-google_1000000000000000000028.png" alt="Google" class="h-3.5" style="width:42px" width="42" height="14">
         </div>
-        <a href="#devis" class="block w-full bg-amber-300 text-stone-900 font-figtree text-lg font-bold text-center py-4 rounded-2xl shadow-md hover:bg-amber-300 active:bg-orange-400 no-underline">Demander mon devis gratuit</a>
-        <p class="text-center leading-4 mt-2"><span class="text-zinc-600 font-inter text-sm">Devis par un expert - Sans engagement</span></p>
+        <a href="#devis" class="block w-full bg-amber-300 text-stone-900 font-figtree text-lg font-bold text-center py-4 rounded-2xl shadow-md hover:bg-amber-400 active:bg-orange-400 no-underline">Demander mon devis gratuit</a>
+        <p class="text-center leading-4 mt-2"><span class="text-stone-900 font-inter text-sm font-semibold">Devis par un expert - Sans engagement</span></p>
       </div>
     </div>
   </section>
@@ -115,6 +116,7 @@
           <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-palaiseau-adw/12c3ec1e-frame-16.webp" alt="Trustpilot" class="w-20 h-4" width="80" height="16">
           <span class="text-gray-600 font-inter text-sm">4,9/5 (83 avis)</span>
           <span class="text-stone-900 font-inter text-sm font-bold">| Excellent</span>
+          <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/8563fa39-image-google_1000000000000000000028.png" alt="Google" class="h-3.5" style="width:42px" width="42" height="14">
         </div>
         <div class="flex flex-col gap-2.5 mb-5">
           <div class="flex items-center gap-3">
@@ -130,7 +132,11 @@
             <span class="text-stone-900 font-figtree text-base">Boxes disponibles dès aujourd'hui</span>
           </div>
         </div>
-        <a href="#devis" id="devis" class="block w-full bg-amber-300 text-stone-900 font-figtree text-xl font-bold text-center py-4 rounded-2xl shadow-md hover:bg-amber-300 active:bg-orange-400 no-underline">Demander mon devis gratuit</a>
+        <a href="#devis" id="devis" class="block w-full bg-amber-300 text-stone-900 font-figtree text-xl font-bold text-center py-4 rounded-2xl shadow-md hover:bg-amber-400 active:bg-orange-400 no-underline">Demander mon devis gratuit</a>
+        <div class="flex items-center justify-center gap-1 mt-2">
+          <span class="text-emerald-600 text-sm">&#9679;</span>
+          <span class="text-stone-900 font-figtree text-sm">Dernières places disponibles</span>
+        </div>
         <p class="text-center leading-4 mt-3"><span class="text-zinc-600 font-inter text-sm font-bold">Devis par un expert - Sans engagement</span></p>
       </div>
       <!-- Image slider droite -->
@@ -379,15 +385,19 @@
       <div class="flex justify-center mb-10"><img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-palaiseau-adw/85f20276-frame-1000005973_1000000000000000000028.png" alt="" class="w-28 h-1" loading="lazy" decoding="async" width="112" height="4"></div>
       <div class="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto font-figtree">
         <div class="flex flex-col gap-4">
-          <details open class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4"><summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-black">Comment se passe la réservation ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Vous pouvez réserver votre box très facilement en faisant une demande de devis ou en contactant directement notre service d'experts au 03 72 88 03 38.</div></details>
+          <details class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4"><summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-black">Comment se passe la réservation ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Vous pouvez réserver votre box très facilement en faisant une demande de devis ou en contactant directement notre service d'experts au 03 72 88 03 38.</div></details>
           <details class="rounded-2xl border-[3px] border-solid border-amber-300 px-4"><summary class="faq-btn-gold text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Est-il facile d'accéder au box ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Oui, nos centres sont pensés pour vous faciliter l'accès à votre box. Nos centres sont 100% digitalisés, accès 7j/7 de 6h à 23h.</div></details>
           <details class="rounded-2xl border-[3px] border-solid border-rose-300 px-4"><summary class="faq-btn-pink text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Puis-je visiter le box avant de le réserver ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Bien sûr ! Vous pouvez le visiter après avoir fait votre réservation. Si il ne vous convient pas, vous pouvez annuler gratuitement et immédiatement votre réservation.</div></details>
         </div>
         <div class="flex flex-col gap-4">
-          <details class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4"><summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Mes affaires sont-elles en sécurité ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Oui, nos sites sont équipés de vidéosurveillance et de systèmes d'alarme, de contrôle d'accès.</div></details>
-          <details class="rounded-2xl border-[3px] border-solid border-amber-300 px-4"><summary class="faq-btn-gold text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Y a-t-il une caution à payer ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Non, vous payez uniquement vos loyers. L'assurance est aussi incluse dans le prix.</div></details>
+          <details open class="rounded-2xl border-[3px] border-solid border-emerald-600 px-4"><summary class="faq-btn-green text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Mes affaires sont-elles en sécurité ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Oui, nos sites sont équipés de vidéosurveillance et de systèmes d'alarme, de contrôle d'accès.</div></details>
+          <details open class="rounded-2xl border-[3px] border-solid border-amber-300 px-4"><summary class="faq-btn-gold text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Y a-t-il une caution à payer ?</summary><div class="pb-4 text-neutral-500 text-base leading-6">Non, vous payez uniquement vos loyers. L'assurance est aussi incluse dans le prix.</div></details>
           <details class="rounded-2xl border-[3px] border-solid border-rose-300 px-4"><summary class="faq-btn-pink text-left w-full py-4 cursor-pointer justify-between items-center text-base md:text-lg font-semibold flex text-stone-900">Est-ce que je peux modifier ma réservation ?</summary><div class="pb-4 text-neutral-500 text-base leading-6"><p class="mb-4">Oui, vous pouvez modifier la réservation facilement et gratuitement jusqu'à J-3.</p><p>Pendant votre location vous avez finalement plus d'affaires à stocker ? Modifiez votre réservation très facilement.</p></div></details>
         </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#devis" class="inline-block bg-amber-300 text-stone-900 font-figtree text-lg font-bold px-10 py-4 rounded-2xl shadow-md hover:bg-amber-400 no-underline">Encore des questions ? Un expert vous rappelle</a>
+        <p class="text-center leading-4 mt-3"><span class="text-zinc-600 font-inter text-sm">Gratuit et sans engagement</span></p>
       </div>
     </div>
   </section>
@@ -406,7 +416,7 @@
   </main>
 
   <!-- STICKY BOTTOM BAR -->
-  <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-solid border-t-black/50 rounded-t-xl z-[9999] md:hidden" style="font-family: Poppins, sans-serif;">
+  <div id="stickyBar" class="hidden fixed bottom-0 left-0 w-full bg-white border-t-2 border-solid border-t-black/50 rounded-t-xl z-[9999] md:hidden" style="font-family: Poppins, sans-serif;">
     <div class="max-w-screen-md mx-auto w-full">
       <div class="text-center text-base p-2.5"><strong class="font-bold">Jusqu'à - 75% de remise le 1er mois</strong></div>
       <div class="flex gap-2.5 p-2.5 pt-0">
@@ -421,17 +431,19 @@
   <div id="popupDevis" class="fixed inset-0 z-[99999] hidden" aria-modal="true" role="dialog">
     <div class="absolute inset-0 bg-black/50" onclick="closePopup()"></div>
     <div class="absolute inset-0 flex items-center justify-center p-4 md:p-8 overflow-y-auto" onclick="closePopup()">
-    <div class="bg-white rounded-3xl shadow-xl w-full max-w-lg p-6 md:p-8 relative my-auto" onclick="event.stopPropagation()">
+    <div class="bg-white rounded-3xl shadow-xl w-full max-w-lg p-4 md:p-8 relative my-auto" onclick="event.stopPropagation()">
       <button onclick="closePopup()" aria-label="Fermer" class="absolute -top-2 -right-2 w-10 h-10 bg-stone-900 text-white rounded-full flex items-center justify-center text-lg cursor-pointer border-none shadow-xl hover:bg-stone-800" style="z-index:1">&#10005;</button>
       <div class="flex justify-center mb-4"><img src="../assets/logos/kostok-header.webp" alt="Kostok" class="w-36 h-14" width="144" height="56"></div>
       <h2 class="text-center font-figtree text-2xl md:text-3xl font-bold leading-9 mb-4"><span class="text-rose-300">Trouver</span> <span class="text-emerald-800">mon box<br>sécurisé</span> <span class="text-rose-300">et</span> <span class="text-emerald-800">m'alléger</span></h2>
       <p class="text-stone-900 font-figtree text-base mb-3">Nos experts vous :</p>
       <ul class="list-disc pl-6 mb-6 font-figtree text-base text-stone-900 space-y-2"><li><strong>Rappellent 7j/7 de 8h à 18h</strong> pour établir votre devis gratuit, sans engagement</li><li><strong>Aident pour choisir la taille de box adaptée</strong></li><li><strong>Donnent un prix net, sans surprise</strong></li></ul>
-      <form onsubmit="event.preventDefault();var tel=this.querySelector('input').value;var prefix=this.querySelector('select').value;var digits=tel.replace(/[^0-9]/g,'');if(digits.length===10){sendLeadEmail(prefix+' '+tel,'Kostok FB - Stockage Saint-Quentin','Saint-Quentin');fetch('https://hook.eu1.make.com/7lach1iy3vucbm4unzx463l67c7nwye4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:prefix+tel.replace(/^0/,''),phone_raw:tel,page:'Kostok FB - Stockage Saint-Quentin',ville:'Saint-Quentin',lead_split:'Kostok Saint-Quentin',date:new Date().toISOString()})}).finally(function(){window.location.href='thank-you.html';});}else{this.querySelector('input').style.borderColor='#f87171';}" class="mb-4">
+      <form onsubmit="event.preventDefault();var tel=this.querySelector('input').value;var prefix=this.querySelector('select').value;var digits=tel.replace(/[^0-9]/g,'');if(digits.length===10){var btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='Envoi en cours...';btn.style.opacity='0.6';sendLeadEmail(prefix+' '+tel,'Kostok FB - Stockage Saint-Quentin','Saint-Quentin');fetch('https://hook.eu1.make.com/7lach1iy3vucbm4unzx463l67c7nwye4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:prefix+tel.replace(/^0/,''),phone_raw:tel,page:'Kostok FB - Stockage Saint-Quentin',ville:'Saint-Quentin',lead_split:'Kostok Saint-Quentin',date:new Date().toISOString()})}).finally(function(){window.location.href='thank-you.html';});}else{this.querySelector('input').style.borderColor='#f87171';var em=document.getElementById('phoneError');if(em)em.classList.remove('hidden');}" class="mb-4">
         <div class="flex gap-2 mb-4"><select id="phonePrefix" aria-label="Indicatif pays" class="border-2 border-solid border-zinc-300 rounded-full px-3 py-4 text-base font-figtree outline-none focus:border-emerald-600 appearance-none cursor-pointer" style="background:#fff;min-width:110px;"><option value="+33" selected>🇫🇷 +33</option><option value="+41">🇨🇭 +41</option><option value="+32">🇧🇪 +32</option><option value="+352">🇱🇺 +352</option><option value="+377">🇲🇨 +377</option></select>
-        <input type="tel" id="phoneInput" aria-label="Numéro de téléphone" required minlength="10" maxlength="10" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="Numéro de téléphone" class="flex-1 border-2 border-solid border-zinc-300 rounded-full px-5 py-4 text-base font-figtree outline-none focus:border-emerald-600" style="background:#fff;"></div>
-        <button type="submit" class="w-full bg-amber-300 text-stone-900 font-figtree text-lg font-bold py-4 rounded-full border-none cursor-pointer shadow-md hover:bg-amber-400">Me Rappeler</button>
+        <input type="tel" autocomplete="tel" id="phoneInput" aria-label="Numéro de téléphone" required minlength="10" maxlength="10" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="Numéro de téléphone" class="flex-1 border-2 border-solid border-zinc-300 rounded-full px-5 py-4 text-base font-figtree outline-none focus:border-emerald-600" style="background:#fff;"></div>
+        <p id="phoneError" class="hidden text-sm font-figtree mb-2 -mt-2 ml-1" style="color:#f87171">Veuillez entrer un numéro à 10 chiffres</p>
+        <button id="submitBtn" type="submit" class="w-full bg-amber-300 text-stone-900 font-figtree text-lg font-bold py-4 rounded-full border-none cursor-pointer shadow-md hover:bg-amber-400">Me Rappeler</button>
       </form>
+      <div class="flex items-center justify-center gap-2 mb-3 mt-1"><img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-branding-idf-adw/12c3ec1e-frame-16.webp" alt="" class="w-16 h-3" width="64" height="12"><span class="text-gray-600 font-inter text-xs">4,9/5 (83 avis) | <strong>Excellent</strong></span></div>
       <p class="text-center font-figtree text-sm mb-4"><strong class="text-emerald-800">Devis sans engagement - Annulation gratuite</strong> <span class="text-stone-900">jusqu'à J-3</span></p>
       <div class="bg-zinc-100 rounded-2xl p-4 flex items-start gap-3"><span class="text-emerald-600 text-xl mt-0.5">&#128274;</span><p class="text-gray-600 font-figtree text-sm leading-5">Nous utilisons votre numéro de téléphone <strong>UNIQUEMENT pour vous re-contacter</strong> et vous proposer un devis gratuit.</p></div>
     </div>
@@ -464,7 +476,8 @@
     function loadSib(){if(sibLoaded)return;sibLoaded=true;window.sib={equeue:[],client_key:"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"};var s=document.createElement("script");s.async=true;s.src="https://sibautomation.com/sa.js?key="+window.sib.client_key;document.head.appendChild(s);}
     function loadGTM(){if(gtmLoaded)return;gtmLoaded=true;window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var j=document.createElement('script');j.async=true;j.src='https://sstrk.costockage.fr/io3xeiyxja.js?tg=WVD7LC';document.head.appendChild(j);}
     ['scroll','click','touchstart','mouseover'].forEach(function(e){document.addEventListener(e,function(){loadGTM();loadSib();},{once:true,passive:true});});
-    setTimeout(function(){loadGTM();loadSib();},12000);
+    setTimeout(function(){loadGTM();loadSib();},12000);(function(){var sb=document.getElementById('stickyBar');if(!sb)return;var shown=false;window.addEventListener('scroll',function(){if(window.scrollY>600){if(!shown){sb.classList.remove('hidden');shown=true;}}else{if(shown){sb.classList.add('hidden');shown=false;}}},{passive:true});})();
+var exitShown=false;document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&!e.toElement&&e.clientY<10&&!exitShown&&window.innerWidth>=768){exitShown=true;openPopup();}});
   </script>
 </body>
 </html>
