@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Merci - Kostok</title>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <style>
+    @font-face { font-family: 'Figtree Fallback'; src: local('Arial'); size-adjust: 100.4%; ascent-override: 103%; descent-override: 29%; line-gap-override: 0%; }
+    body { font-family: 'Figtree', 'Figtree Fallback', Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; display: block; vertical-align: middle; }
+    a { color: inherit; text-decoration: inherit; }
+    .bg-white { background-color: #fff; }
+    .min-h-screen { min-height: 100vh; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .max-w-xl { max-width: 36rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .text-center { text-align: center; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .gap-3 { gap: 0.75rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .h-16 { height: 4rem; }
+    .w-5 { width: 1.25rem; }
+    .h-5 { height: 1.25rem; }
+    .w-full { width: 100%; }
+    .max-w-lg { max-width: 32rem; }
+    .shrink-0 { flex-shrink: 0; }
+    .rounded-2xl { border-radius: 1rem; }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-base { font-size: 1rem; line-height: 1.5rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    .leading-6 { line-height: 1.5rem; }
+    .leading-7 { line-height: 1.75rem; }
+    .leading-10 { line-height: 2.5rem; }
+    .no-underline { text-decoration: none; }
+    .text-rose-300 { color: #f4a9be; }
+    .text-emerald-800 { color: #065f46; }
+    .text-emerald-600 { color: #059669; }
+    .text-zinc-600 { color: #52525b; }
+  </style>
+  <script>
+    var ric=window.requestIdleCallback||function(cb){setTimeout(cb,200)};
+    window.addEventListener('load',function(){ric(function(){var lnk=document.createElement('link');lnk.rel='stylesheet';lnk.href='https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=optional';document.head.appendChild(lnk);});});
+  </script>
+</head>
+<body class="bg-white min-h-screen px-4 py-10">
+  <div class="max-w-xl mx-auto text-center">
+    <!-- Logo -->
+    <div class="flex justify-center mb-8">
+      <img src="../assets/logos/kostok-thankyou.png" alt="Kostok" class="h-16" width="192" height="64">
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold leading-10 mb-8">
+      <span class="text-rose-300">Votre </span><span class="text-emerald-800">Demande de Devis </span><span class="text-rose-300"> a été </span><span class="text-emerald-800">envoyée</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-zinc-600 text-base leading-6 mb-6">
+      Nos conseillers vont vous rappeler dans les meilleurs délais pour vous proposer un box :
+    </p>
+
+    <!-- Features -->
+    <div class="flex flex-col gap-3 mb-8 items-center">
+      <div class="flex items-center gap-3">
+        <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-thank-you-branding-idf-adw/b3ae35f0-vector_1000000000000000000028.png" alt="" class="w-5 h-5 shrink-0" loading="lazy" decoding="async" width="20" height="20">
+        <span class="text-zinc-600 text-base font-bold">Disponible maintenant</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-thank-you-branding-idf-adw/b3ae35f0-vector_1000000000000000000028.png" alt="" class="w-5 h-5 shrink-0" loading="lazy" decoding="async" width="20" height="20">
+        <span class="text-zinc-600 text-base font-bold">100% Sécurisé</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-thank-you-branding-idf-adw/b3ae35f0-vector_1000000000000000000028.png" alt="" class="w-5 h-5 shrink-0" loading="lazy" decoding="async" width="20" height="20">
+        <span class="text-zinc-600 text-base font-bold">Avec un Prix Net sans frais cachés</span>
+      </div>
+    </div>
+
+    <!-- Phone info - Modifier PHONE_NUMBERS ci-dessous pour preremplir -->
+    <div id="phone-info" class="text-zinc-600 text-base leading-7 mb-10"></div>
+    <script>
+    var PHONE_NUMBERS = ["0176440591"];
+    (function(){
+      var p=new URLSearchParams(window.location.search),t=p.get("tel");
+      var nums=t?t.split(","):PHONE_NUMBERS,c=document.getElementById("phone-info"),v=[],err=false;
+      nums.forEach(function(n){n=n.trim().replace(/[^0-9]/g,"");if(/^0[0-9]{9}$/.test(n))v.push(n);else if(n.length>0)err=true;});
+      if(err||v.length===0){c.innerHTML="<span style=\"color:#f87171;font-weight:bold;\">Format incorrect</span>";return;}
+      var label=v.length===1?"Le num\xe9ro qui va vous rappeler est le :":"Les num\xe9ros qui vont vous rappeler sont les :";
+      var html=label+"<br>";
+      v.forEach(function(n,i){var f=n.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/,"$1 $2 $3 $4 $5");html+="<a href=\"tel:"+n+"\" class=\"text-emerald-600 text-base font-bold no-underline\">"+f+"</a>";if(i<v.length-1)html+="<br>";});
+      c.innerHTML=html;
+    })();
+    </script>
+
+    <!-- Illustration -->
+    <div class="flex justify-center">
+      <img src="https://d9hhrg4mnvzow.cloudfront.net/landing.costockage.fr/lpbc-thank-you-branding-idf-adw/842684e1-frame-1000006039.webp" alt="Vivez Léger - Kostok" class="w-full max-w-lg rounded-2xl" loading="lazy" decoding="async" width="512" height="512">
+    </div>
+  </div>
+
+  <script>
+    var gtmLoaded=false,sibLoaded=false;
+    function loadSib(){if(sibLoaded)return;sibLoaded=true;window.sib={equeue:[],client_key:"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"};var s=document.createElement("script");s.async=true;s.src="https://sibautomation.com/sa.js?key="+window.sib.client_key;document.head.appendChild(s);}
+    function loadGTM(){if(gtmLoaded)return;gtmLoaded=true;window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var j=document.createElement('script');j.async=true;j.src='https://sstrk.costockage.fr/io3xeiyxja.js?tg=WVD7LC';document.head.appendChild(j);}
+    ['scroll','click','touchstart','mouseover'].forEach(function(e){document.addEventListener(e,function(){loadGTM();loadSib();},{once:true,passive:true});});
+    setTimeout(function(){loadGTM();loadSib();},3000);
+  </script>
+</body>
+</html>
